@@ -9,10 +9,10 @@ setup-source:
 	echo "Installing goimports"
 	go get golang.org/x/tools/cmd/goimports
 	echo "Cloning Repos"
-	cd .. && (git clone https://github.com/k8guard/k8guardlibs.git || true) && cd k8guardlibs && make deps
-	cd .. && (git clone https://github.com/k8guard/k8guard-discover.git || true) && cd k8guard-discover && make deps
-	cd .. && (git clone https://github.com/k8guard/k8guard-action.git || true) && cd k8guard-action && make deps
-	cd .. && (git clone https://github.com/k8guard/k8guard-report.git || true) && cd k8guard-report && make deps
+	cd .. && (git clone https://github.com/boardthatpowder/k8guardlibs.git || true) && cd k8guardlibs && make deps
+	cd .. && (git clone https://github.com/boardthatpowder/k8guard-discover.git || true) && cd k8guard-discover && make deps
+	cd .. && (git clone https://github.com/boardthatpowder/k8guard-action.git || true) && cd k8guard-action && make deps
+	cd .. && (git clone https://github.com/boardthatpowder/k8guard-report.git || true) && cd k8guard-report && make deps
 	echo "Creating config files"
 	cp .env-creds-template .env-creds
 	cp .env-template .env
